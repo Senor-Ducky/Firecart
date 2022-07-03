@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:firecart/constants/error_handler.dart';
 import 'package:firecart/constants/utils.dart';
 import 'package:firecart/models/user.dart';
@@ -35,6 +37,31 @@ class AuthService {
         onSuccess: () {
           ShowSnackBar(context, 'Account Created! Login with same credentials');
         },
+      );
+    } catch (e) {
+      ShowSnackBar(context, e.toString());
+    }
+  }
+
+  void signInUser(
+      {required BuildContext context,
+      required String email,
+      required String password}) async {
+    try {
+      http.Response res = await http.post(
+        Uri.parse('$uri/api/signin'),
+        body: jsonEncode({'email': email, 'password': password}),
+        headers: <String, String>{
+          'Content-Type': 'application/json; charset=UTF-8',
+        },
+      );
+
+      print(res.body);
+
+      httpErrorhandle(
+        response: res,
+        context: context,
+        onSuccess: () {},
       );
     } catch (e) {
       ShowSnackBar(context, e.toString());
