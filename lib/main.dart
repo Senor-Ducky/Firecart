@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Firecart',
       theme: ThemeData(
-        scaffoldBackgroundColor: GlobalVariables.backgroundColor,
+        scaffoldBackgroundColor: GlobalVariables.greyBackgroundCOlor,
         appBarTheme: const AppBarTheme(
           elevation: 0,
           iconTheme: IconThemeData(
