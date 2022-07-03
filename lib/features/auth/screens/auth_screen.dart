@@ -1,6 +1,7 @@
 import 'package:firecart/common/widgets/custom-button.dart';
 import 'package:firecart/common/widgets/custom-textfield.dart';
 import 'package:firecart/constants/global_variables.dart';
+import 'package:firecart/features/auth/services/auth_services.dart';
 import 'package:flutter/material.dart';
 
 enum Auth {
@@ -23,6 +24,7 @@ class _AuthScreenState extends State<AuthScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _nameController = TextEditingController();
+  final AuthService authService = AuthService();
 
   @override
   void dispose() {
@@ -31,6 +33,15 @@ class _AuthScreenState extends State<AuthScreen> {
     _emailController.dispose();
     _nameController.dispose();
     _passwordController.dispose();
+  }
+
+  void signUpUser() {
+    authService.SignUpUser(
+      context: context,
+      email: _emailController.text,
+      name: _nameController.text,
+      password: _passwordController.text,
+    );
   }
 
   @override
@@ -42,6 +53,8 @@ class _AuthScreenState extends State<AuthScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              //welcome-text
+
               const Text(
                 'Welcome',
                 style: TextStyle(
@@ -49,6 +62,9 @@ class _AuthScreenState extends State<AuthScreen> {
                   fontWeight: FontWeight.w500,
                 ),
               ),
+
+              //Sign Up Section
+
               ListTile(
                 tileColor: _auth == Auth.signup
                     ? GlobalVariables.backgroundColor
@@ -68,6 +84,9 @@ class _AuthScreenState extends State<AuthScreen> {
                   },
                 ),
               ),
+
+              //Sign Up Form
+
               if (_auth == Auth.signup)
                 Container(
                   padding: const EdgeInsets.all(8.0),
@@ -99,12 +118,19 @@ class _AuthScreenState extends State<AuthScreen> {
                         ),
                         CustomButton(
                           text: 'Sign Up',
-                          onTap: () {},
+                          onTap: () {
+                            if (_signUpFormKey.currentState!.validate()) {
+                              signUpUser();
+                            }
+                          },
                         ),
                       ],
                     ),
                   ),
                 ),
+
+              //Sign In Section
+
               ListTile(
                 tileColor: _auth == Auth.signin
                     ? GlobalVariables.backgroundColor
@@ -124,6 +150,9 @@ class _AuthScreenState extends State<AuthScreen> {
                   },
                 ),
               ),
+
+              //Sign In Form
+
               if (_auth == Auth.signin)
                 Container(
                   padding: const EdgeInsets.all(8.0),

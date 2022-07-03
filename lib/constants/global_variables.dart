@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'dart:io';
+import 'package:dotenv/dotenv.dart';
+
+var env = DotEnv(includePlatformEnvironment: true)..load();
+String uri = "http://10.0.2.2:3000";
 
 class GlobalVariables {
   static const appBarGradient = LinearGradient(
