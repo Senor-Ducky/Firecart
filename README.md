@@ -51,13 +51,7 @@ Then run the following commands to run your app:
   flutter run
 ```
 
-## Tech Used
-**Server**: Node.js, Express, Mongoose, MongoDB, Cloudinary
 
-**Client**: Flutter, Provider
 
-## Credits
-This Project was inspired by this video, please check out the channel: https://www.youtube.com/watch?v=O3nmP-lZAdg&t=10347s
-credits for the tutorial go to @RivaanRanawat
 
     
