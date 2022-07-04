@@ -1,6 +1,5 @@
 # Firecart
-An Cross-Platform online shopping platform for (Android/IOS/Windows/MacOS/Linux) made with Flutter 3 and NodeJS, ExpressJS, MongoDB (note: This app was initially started as a university project)
-
+An Cross-Platform online shopping platform for (Android/IOS/Windows/MacOS/Linux) made with Flutter 3 and NodeJS, ExpressJS, MongoDB 
 
 
 ## Features
@@ -56,7 +55,9 @@ Then run the following commands to run your app:
 **Server**: Node.js, Express, Mongoose, MongoDB, Cloudinary
 
 **Client**: Flutter, Provider
-    
-## Feedback
 
-If you have any feedback, please reach out to me at namanrivaan@gmail.com
+## Credits
+This Project was inspired by this video, please check out the channel: https://www.youtube.com/watch?v=O3nmP-lZAdg&t=10347s
+credits for the tutorial go to @RivaanRanawat
+
+    
