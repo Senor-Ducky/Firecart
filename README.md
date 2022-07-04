@@ -1,6 +1,5 @@
 # Firecart
-An Cross-Platform online shopping platform for (Android/IOS/Windows/MacOS/Linux) made with Flutter 3 and NodeJS, ExpressJS, MongoDB (note: This app was initially started as a university project)
-
+An Cross-Platform online shopping platform for (Android/IOS/Windows/MacOS/Linux) made with Flutter 3 and NodeJS, ExpressJS, MongoDB 
 
 
 ## Features
@@ -27,7 +26,7 @@ An Cross-Platform online shopping platform for (Android/IOS/Windows/MacOS/Linux)
 
 
 ## Running Locally
-After cloning this repository, migrate to ```flutter-amazon-clone-tutorial``` folder. Then, follow the following steps:
+After cloning this repository, migrate to ```firecart``` folder. Then, follow the following steps:
 - Create MongoDB Project & Cluster
 - Click on Connect, follow the process where you will get the uri.- Replace the MongoDB uri with yours in ```server/index.js```.
 - Head to ```lib/constants/global_variables.dart``` file, replace <yourip> with your IP Address. 
@@ -52,11 +51,7 @@ Then run the following commands to run your app:
   flutter run
 ```
 
-## Tech Used
-**Server**: Node.js, Express, Mongoose, MongoDB, Cloudinary
 
-**Client**: Flutter, Provider
+
+
     
-## Feedback
-
-If you have any feedback, please reach out to me at namanrivaan@gmail.com
