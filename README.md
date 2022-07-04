@@ -26,7 +26,7 @@ An Cross-Platform online shopping platform for (Android/IOS/Windows/MacOS/Linux)
 
 
 ## Running Locally
-After cloning this repository, migrate to ```flutter-amazon-clone-tutorial``` folder. Then, follow the following steps:
+After cloning this repository, migrate to ```firecart``` folder. Then, follow the following steps:
 - Create MongoDB Project & Cluster
 - Click on Connect, follow the process where you will get the uri.- Replace the MongoDB uri with yours in ```server/index.js```.
 - Head to ```lib/constants/global_variables.dart``` file, replace <yourip> with your IP Address. 
