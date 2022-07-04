@@ -1,27 +1,35 @@
-// package imports
-const express = require('express');
-const mongoose = require('mongoose');
-require('dotenv').config()
+// IMPORTS FROM PACKAGES
+const express = require("express");
+const mongoose = require("mongoose");
+const adminRouter = require("./routes/admin");
+// IMPORTS FROM OTHER FILES
+const authRouter = require("./routes/auth");
+const productRouter = require("./routes/product");
+const userRouter = require("./routes/user");
 
-// file imports
-const authRouter = require('./routes/auth');
-
-//initialization
+// INIT
+const PORT = process.env.PORT || 3000;
 const app = express();
-const DB = `mongodb+srv://rahul:${process.env.PASSWORD}@cluster0.gu2ah0i.mongodb.net/?retryWrites=true&w=majority`
+const DB =
+  "mongodb+srv://rahul:seamusod1234@cluster0.gu2ah0i.mongodb.net/?retryWrites=true&w=majority";
 
 // middleware
 app.use(express.json());
 app.use(authRouter);
+app.use(adminRouter);
+app.use(productRouter);
+app.use(userRouter);
 
+// Connections
+mongoose
+  .connect(DB)
+  .then(() => {
+    console.log("Connection Successful");
+  })
+  .catch((e) => {
+    console.log(e);
+  });
 
-// connections
-mongoose.connect(DB).then(() => {
-    console.log('MongoDB Connection Successful !')
-})
-
-const PORT = 3000;
-
-app.listen(PORT,'0.0.0.0', () => {
-    console.log(`Connected at Port:${PORT}`)
-})
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`connected at port ${PORT}`);
+});
