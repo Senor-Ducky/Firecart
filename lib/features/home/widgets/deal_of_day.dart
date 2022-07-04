@@ -70,7 +70,7 @@ class _DealOfDayState extends State<DealOfDay> {
                       padding:
                           const EdgeInsets.only(left: 15, top: 5, right: 40),
                       child: const Text(
-                        'Rivaan',
+                        '',
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                       ),

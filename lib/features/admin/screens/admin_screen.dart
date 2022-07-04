@@ -43,11 +43,14 @@ class _AdminScreenState extends State<AdminScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                  alignment: Alignment.topLeft,
-                  child: Text(
-                    'Firecart',
-                    style: TextStyle(color: Colors.black),
-                  )),
+                alignment: Alignment.topLeft,
+                child: Text(
+                  'Firecart',
+                  style: TextStyle(
+                    color: Colors.black,
+                  ),
+                ),
+              ),
               const Text(
                 'Admin',
                 style: TextStyle(
