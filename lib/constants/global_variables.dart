@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-String uri = 'https://firecart.herokuapp.com/';
+String uri = 'https://firecart.herokuapp.com';
 
 class GlobalVariables {
   // COLORS
@@ -12,10 +12,10 @@ class GlobalVariables {
     stops: [0.5, 1.0],
   );
 
-  static const secondaryColor = Color.fromRGBO(121, 4, 235, 1);
+  static const secondaryColor = Color.fromARGB(255, 255, 0, 161);
   static const backgroundColor = Colors.white;
   static const Color greyBackgroundCOlor = Color(0xffebecee);
-  static var selectedNavBarColor = Color(0x110458);
+  static var selectedNavBarColor = Color.fromARGB(255, 255, 17, 79);
   static const unselectedNavBarColor = Colors.black87;
 
   // STATIC IMAGES
