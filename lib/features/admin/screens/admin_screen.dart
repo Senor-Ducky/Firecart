@@ -4,6 +4,8 @@ import 'package:firecart/features/admin/screens/orders_screen.dart';
 import 'package:firecart/features/admin/screens/posts_screen.dart';
 import 'package:flutter/material.dart';
 
+import '../../account/services/account_services.dart';
+
 class AdminScreen extends StatefulWidget {
   const AdminScreen({Key? key}) : super(key: key);
 
@@ -49,6 +51,13 @@ class _AdminScreenState extends State<AdminScreen> {
                   style: TextStyle(
                     color: Colors.black,
                   ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () => AccountServices().logOut(context),
+                child: Text(
+                  "Log Out",
+                  style: TextStyle(color: Colors.black),
                 ),
               ),
               const Text(
